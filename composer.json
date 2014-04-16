@@ -44,9 +44,9 @@
 	},
 	"extra": {
 		"installer-paths": {
-			"htdocs/wp": ["wordpress/wordpress"],
-			"htdocs/wp-content/plugins/{$name}/" : ["type:wordpress-plugin"],
-			"htdocs/wp-content/themes/{$name}/"  : ["type:wordpress-theme"]
+			"public/htdocs/wp": ["wordpress/wordpress"],
+			"public/htdocs/wp-content/plugins/{$name}/" : ["type:wordpress-plugin"],
+			"public/htdocs/wp-content/themes/{$name}/"  : ["type:wordpress-theme"]
 		}
 	}
 }
