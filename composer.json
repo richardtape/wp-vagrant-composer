@@ -19,9 +19,9 @@
 			"type": "package",
 			"package": {
 				"name": "wordpress/wordpress",
-				"version": "3.8.3",
+				"version": "3.9",
 				"dist": {
-					"url": "http://wordpress.org/wordpress-3.8.3.zip",
+					"url": "http://wordpress.org/wordpress-3.9.zip",
 					"type": "zip"
 				},
 				"require": {
@@ -46,6 +46,7 @@
 		"installer-paths": {
 			"public/htdocs/wp": ["wordpress/wordpress"],
 			"public/htdocs/wp-content/plugins/{$name}/" : ["type:wordpress-plugin"],
+			"public/htdocs/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
 			"public/htdocs/wp-content/themes/{$name}/"  : ["type:wordpress-theme"]
 		}
 	}
