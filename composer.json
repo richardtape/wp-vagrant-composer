@@ -16,10 +16,6 @@
 			"url" : "http://wpackagist.org"
 		},
 		{
-            "type": "vcs",
-            "url": "https://github.com/richardtape/incipio-composer"
-        },
-		{
 			"type": "package",
 			"package": {
 				"name": "wordpress/wordpress",
@@ -32,6 +28,21 @@
 					"composer/installers": "~1.0"
 				},
 				"type": "wordpress-plugin"
+			}
+		},
+        {
+			"type": "package",
+			"package": {
+				"name": "richardtape/incipio-composer",
+				"version": "0.0.1",
+				"dist": {
+					"url": "https://github.com/richardtape/incipio-composer/archive/master.zip",
+					"type": "zip"
+				},
+				"require": {
+					"composer/installers": "~1.0"
+				},
+				"type": "wordpress-theme"
 			}
 		}
 	],
