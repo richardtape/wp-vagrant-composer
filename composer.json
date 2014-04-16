@@ -1,0 +1,52 @@
+{
+	"name"        : "richardtape/wp-vagrant-composer",
+	"description" : "A starting point to install WordPress and requirements via composer",
+	"authors"     : [
+		{
+			"name"    : "Richard Tape",
+			"email"   : "richard@iamfriendly.com",
+			"homepage": "http://richardtape.com/"
+		}
+	],
+	"type"        : "project",
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"type": "composer",
+			"url" : "http://wpackagist.org"
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "wordpress/wordpress",
+				"version": "3.8.3",
+				"dist": {
+					"url": "http://wordpress.org/wordpress-3.8.3.zip",
+					"type": "zip"
+				},
+				"require": {
+					"composer/installers": "~1.0"
+				},
+				"type": "wordpress-plugin"
+			}
+		}
+	],
+	"config"      : {
+		"vendor-dir":  "vendor"
+	},
+	"require"     : {
+		"wpackagist/advanced-custom-fields"    : "*",
+		"wpackagist/user-switching"            : "*",
+		"wordpress/wordpress"                : "*"
+	},
+	"require-dev" : {
+		"wpackagist/log-deprecated-notices"    : "*"
+	},
+	"extra": {
+		"installer-paths": {
+			"htdocs/wp": ["wordpress/wordpress"],
+			"htdocs/wp-content/plugins/{$name}/" : ["type:wordpress-plugin"],
+			"htdocs/wp-content/themes/{$name}/"  : ["type:wordpress-theme"]
+		}
+	}
+}
