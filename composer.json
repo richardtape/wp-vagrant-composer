@@ -19,9 +19,9 @@
 			"type": "package",
 			"package": {
 				"name": "wordpress/wordpress",
-				"version": "3.9",
+				"version": "3.9.1",
 				"dist": {
-					"url": "http://wordpress.org/wordpress-3.9.zip",
+					"url": "http://wordpress.org/wordpress-3.9.1.zip",
 					"type": "zip"
 				},
 				"require": {
